@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create a list to store names
+        List<string> nameList = new List<string>();
+        string name;
+
+        // Loop to get 5 names from user input
+        do
+        {
+            name = Console.ReadLine();  // Read name from user
+            nameList.Add(name);         // Add name to the list
+        } while (nameList.Count < 5);  // Continue until 5 names are added
+
+        // Prompt user to search for a name
+        Console.WriteLine("Search for a User's Name.");
+        name = Console.ReadLine();  // Read the name to search
+
+        // Check if the name exists in the list
+        if (nameList.Contains(name))
+        {
+            Console.WriteLine("User " + name + " found.");  // If found, display message
+        }
+        else
+        {
+            Console.WriteLine("User " + name + " is not found.");  // If not found, display message
+        }
+    }
+}
